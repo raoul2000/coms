@@ -87,6 +87,12 @@
 	    <fileset refid="PHPFiles" />
 	  </phplint>
 	</target>
+  <target name="sniff" description="Check Yii2 coding standard compliance">
+      <exec command="vendor\bin\phpcs --encoding=utf-8 --extensions=php ." outputProperty="phpcs_output"/>
+      <echo msg="Sniff result :"/>
+      <echo>${phpcs_output}</echo>
+</target>
+
     <!--
 		Deploy
 	 -->

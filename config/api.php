@@ -54,9 +54,15 @@ $config = [
                 [
                   'class' => 'yii\rest\UrlRule',
                   'pluralize' => false,
-                  'controller' => ['user']],
+                  'controller' => ['v1/user']
+                ],
             ],
         ]
+    ],
+    'modules' => [
+        'v1' => [
+            'class' => 'app\modules\v1\Module',
+        ],
     ],
     'params' => $params,
 ];

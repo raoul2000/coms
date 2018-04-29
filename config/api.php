@@ -47,14 +47,14 @@ $config = [
         ],
         'db' => $db,
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            'enableStrictParsing' => true,
-            'showScriptName' => false,
+            'enablePrettyUrl' => false,
+            'enableStrictParsing' => false,
+            'showScriptName' => true,
             'rules' => [
                 [
                   'class' => 'yii\rest\UrlRule',
-                  'pluralize' => false,
-                  'controller' => ['v1/user']
+                  'pluralize' => true,
+                  'controller' => 'user'
                 ],
             ],
         ]
